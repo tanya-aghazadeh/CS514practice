@@ -1,5 +1,3 @@
-package main;
-
 public class MathHelper {
 
     /** Returns the sum of 1 + 2 + 3 + ... + n
@@ -8,8 +6,12 @@ public class MathHelper {
      * @return sum of elements from 1 to n
      */
     public static int arithmeticSeries(int n) {
-        //TODO: Replace with your code.
-        return 0;
+        int k= 0;
+        for(int i=1;i<n+1;i++){
+            k = k + i;
+        }
+
+        return k;
     }
 
 
@@ -23,7 +25,9 @@ public class MathHelper {
      * @return true if these lines segments can form a triangle, and false otherwise
      */
     public static boolean validTriangle(int a, int b, int c) {
-        //TODO: Replace with your code.
+        if (((a+b)>c ) && ((a+c)>a ) && ((b+c)>a)){
+            return true;
+        }
         return false;
     }
 

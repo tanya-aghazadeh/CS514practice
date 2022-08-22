@@ -1,5 +1,3 @@
-package main;
-
 /** A class that contains several methods for manipulating strings */
 public class StringHelper {
 
@@ -10,8 +8,13 @@ public class StringHelper {
      * @return the number of vowels
      */
     public static int countVowels(String message) {
-        //TODO: Replace with your code.
-        return 0;
+        int n = message.length();
+        int k=0;
+        for (int i=0;i<n;i++){
+            if (message.charAt(i) == 'a' || message.charAt(i) == 'e' || message.charAt(i) == 'i' || message.charAt(i) == 'o' || message.charAt(i) == 'u')
+                k=k+1;
+        }
+        return k;
     }
 
     /**
@@ -31,8 +34,25 @@ public class StringHelper {
      * @author Prof. Rollins
      */
     public static String encrypt(String message, int shift) {
-        //TODO: Replace with your code.
-        return null;
+        if (shift>26){
+            return null;
+        }
+
+        int n = message.length();
+        for(int i=0;i<n;i++){
+            char c = message.charAt(i);
+            if ( !(    (   c>='a'&& c<='z'    )    ||   (    c>='A'&& c<='Z'   )  ) ){
+                return null;
+            }
+        }
+
+        for(int i=0;i<n;i++){
+            char cx = message.charAt(i);
+            cx = cx + shift;
+            String new_mwssage = cx + message.substring(i+1,n);
+        }
+
+        return message;
     }
 
     /** Main method: runs methods of class StringHelper */
@@ -44,3 +64,4 @@ public class StringHelper {
     }
 
 }
+

@@ -1,4 +1,3 @@
-package main;
 
 /**
  * A class to help with several common conversions.
@@ -15,8 +14,8 @@ public class ConversionsHelper {
      * @return
      */
     public static double ouncesToGallons(int ounces) {
-        //TODO: Replace with your code.
-        return 0;
+        double gallons = 128.0 * ounces;
+        return gallons;
     }
 
     /**
@@ -27,8 +26,9 @@ public class ConversionsHelper {
      * @return
      */
     public static double cmToFeet(int cm) {
-        //TODO: Replace with your code.
-        return 0;
+       double feet = cm * 30.48;
+       return feet;
+       
     }
 
     public static void main(String[] args) {

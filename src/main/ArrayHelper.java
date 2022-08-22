@@ -10,18 +10,38 @@ public class ArrayHelper {
      * @param arr array of integers
      */
     public static void print(int[] arr) {
-        //TODO: Replace with your code.
+        int x = arr.length;
+        for (int i = 0; i < x; i++) {
+            System.out.println(arr[i]);
+        }
     }
 
     /** Returns the sum of all elements of the array
+     *int[]a = arr.length;
+     sum = 0;
+     for(int i =0;i<a;i++){
+        sum = sum+a[i]
+        System.out.println(sum)
+
+     }
+    
+
+     * 
      *
      * @param arr array of integers
      * @return sum of elements
      */
     public static int sum(int[] arr) {
-        //TODO: Replace with your code.
-        return 0;
+        int a = arr.length;
+        int s = 0;
+        for(int i =0;i<a;i++){
+            s = s+arr[i];
+            
+        }
+        // System.out.println(s);
+        return s;
     }
+    
 
     /** Returns the product of all elements of the array
      *
@@ -29,8 +49,13 @@ public class ArrayHelper {
      * @return product of all elements
      */
     public static int product(int[] arr) {
-        //TODO: Replace with your code.
-        return 1;
+        int a = arr.length;
+        int p = 1;
+        for(int i=0;i<a;i++){
+            p = p *arr[i];
+            //system.out.println(product)
+        }
+        return p;
     }
 
     /**
@@ -41,20 +66,30 @@ public class ArrayHelper {
      * @return
      */
     public static boolean threshold(int[] arr, int thres) {
-        //TODO: Replace with your code.
-        return false;
+        int a = arr.length;
+        for(int i = 0; i<a;i++){ 
+            if (arr[i] > thres){
+                return false;
+            }
+        }
+        return true;
     }
 
     /** Returns true if elem is present in the array and false otherwise
      * Ex: If array is [8, 1, -4, 5, 2] and elem is 1, the method should return true.
      * If elem is 3, the method should return false, since 3 is not in the array
-
      * @param arr array of integers
      * @param elem integer value
      * @return
      */
     public static boolean find(int[] arr, int elem) {
-        //TODO: Replace with your code.
+        int a = arr.length;
+        for (int i =0;i<a;i++){ 
+            // Sysytem.out.println(a[i]);
+            if (elem == arr[i]){
+                return true;
+            }
+        }
         return false;
     }
 
@@ -65,8 +100,14 @@ public class ArrayHelper {
      * @return
      */
     public static int countOccurrences(int[] arr, int elem) {
-        //TODO: Replace with your code.
-        return 0;
+        int a = arr.length;
+        int number_occ = 0;
+        for (int i =0;i<a;i++) {
+            if(arr[i] == elem){
+                number_occ = number_occ+1;   
+            }
+        }
+        return number_occ;
     }
 
     /** Returns true if array of integers has duplicate elements,
@@ -93,7 +134,6 @@ public class ArrayHelper {
         System.out.println("Find " + elem + "? " + ArrayHelper.find(a, 16));
         System.out.println("Number of occurrences of 10: " + ArrayHelper.countOccurrences(a, 10));
         System.out.println("Check array for duplicates: " + ArrayHelper.hasDuplicates(a));
-
     }
-
 }
+
